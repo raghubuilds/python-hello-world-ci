@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Docker run') {
             steps {
-                sh "docker run -p 5000:5000 -d python-app:v3 ."
+                sh "docker run -p -rm 5000:5000 -d python-app:v3 -- sleep 1000 "
             }
         }
         stage('Webpage check') {
