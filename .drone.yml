@@ -2,9 +2,9 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
-  image: python
-  commands:
-  - pip install -r requirements.txt
-  - pytest
+- name: publish
+  image: plugins/docker
+  settings:
+  tags: [ "${DRONE_COMMIT_SHA:0:7}","latest" ]
+  
   
