@@ -6,5 +6,5 @@ steps:
   image: python
   commands:
   - pip install -r requirements.txt
-  - python app.py
-  - sleep 60
+  - pytest
+  
