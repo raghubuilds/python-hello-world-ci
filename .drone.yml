@@ -3,6 +3,7 @@ name: default
 
 steps:
 - name: docker-build
+  image: docker
   commands:
   - docker build -t python-world:v6 .
 
