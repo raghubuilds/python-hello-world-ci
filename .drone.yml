@@ -2,8 +2,7 @@ kind: pipeline
 name: default
 
 steps:
-- name: test
-  image: python
+- name: docker-build
   commands:
-  - pip install -r requirements.txt
-  - pytest
+  - docker build -t python-world:v6 .
+
