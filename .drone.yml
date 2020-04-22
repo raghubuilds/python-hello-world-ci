@@ -5,6 +5,12 @@ steps:
 - name: publish
   image: plugins/docker
   settings:
-    tags: [ "${DRONE_COMMIT_SHA:0:7}","latest" ]
+    repo: raghuveerk/python-world
+    tags: 
+    - 1.0.1
+    username:
+     from_secret: docker_username
+    password:
+     from_secret: docker_password
   
   
